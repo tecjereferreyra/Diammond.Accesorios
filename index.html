@@ -1,0 +1,374 @@
+﻿<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diammond Accesorios</title>
+    <link rel="icon" href="/LogoDA/LOGO_DIAMMOND_ACCESORIOS.png" aria-label="Logo de la Página." />
+    <meta name="description" content="Diammond Accesorios ofrece bijouterie y accesorios femeninos con diseño delicado y estilo elegante. Encontrá aros, anillos, collares, pulseras, gargantillas y piezas únicas para cada ocasión.">
+    <meta name="keywords" content="diammond accesorios, bijouterie, accesorios femeninos, aros, anillos, collares, pulseras, gargantillas, dijes, cadenas con dijes, corbatines, joyas, accesorios elegantes, regalos, moda femenina, accesorios mujer, Diammond Accesorios Córdoba, Calchín">
+    <meta name="author" content="Jeremías Ferreyra.">
+
+    <link rel="preload"
+          href="./Fonts/montserrat-v26-latin-300.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin>
+    <link rel="preload"
+          href="./Fonts/montserrat-v26-latin-regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin>
+    <link rel="preload"
+          href="./Fonts/montserrat-v26-latin-500.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin>
+    <link rel="preload"
+          href="./Fonts/montserrat-v26-latin-600.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin>
+
+    <link rel="preload"
+          href="./Fonts/cinzel-v26-latin-regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin>
+    <link rel="preload"
+          href="./Fonts/cinzel-v26-latin-600.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin>
+
+    <link rel="preload"
+          href="./fontawesome/webfonts/fa-solid-900.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin>
+    <link rel="preload"
+          href="./fontawesome/webfonts/fa-brands-400.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin>
+
+    <link rel="stylesheet" href="./fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="./fontawesome/css/brands.min.css">
+    <link rel="stylesheet" href="Style.css">
+
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header class="navbar" role="banner">
+        <div class="navbar-left">
+            <button class="hamburger" aria-label="Abrir menú de categorías" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="logo">DA</div>
+        </div>
+
+        <h1 class="brand-title">Diammond Accesorios</h1>
+
+        <div class="navbar-right">
+            <span class="user-greeting" id="greeting">¡Hola visitante!</span>
+            <button class="user-btn" id="openLogin" aria-label="Iniciar sesión">
+                <i class="fa-solid fa-user"></i>
+            </button>
+            <button class="logout-btn" id="logoutBtn" style="display:none;" aria-label="Cerrar sesión">
+                <i class="fa-solid fa-door-open"></i>
+            </button>
+        </div>
+    </header>
+    <div id="pageWrapper">
+        <!-- MENÚ MÓVIL -->
+        <nav class="mobile-menu" aria-hidden="true">
+            <button class="menu-close" aria-label="Cerrar menú">✕</button>
+            <div class="mobile-logo">DA</div>
+            <div class="mobile-greeting" id="mobileGreeting">¡Hola Visitante!</div>
+            <ul class="mobile-categories" role="list">
+                <li data-cat="todos" tabindex="0">Todos</li>
+                <li data-cat="anillos" tabindex="0">Anillos</li>
+                <li data-cat="aros" tabindex="0">Aros</li>
+                <li data-cat="cadenas con dijes" tabindex="0">Cadenas con Dijes</li>
+                <li data-cat="collares" tabindex="0">Collares</li>
+                <li data-cat="corbatines" tabindex="0">Corbatines</li>
+                <li data-cat="gargantillas" tabindex="0">Gargantillas</li>
+                <li data-cat="pulseras" tabindex="0">Pulseras</li>
+            </ul>
+        </nav>
+        <div class="mobile-search-bar">
+            <div class="mobile-search-container">
+                <input type="search" id="mobileSearchInput" placeholder="Buscar productos..." autocomplete="off">
+                <button id="mobileBtnBuscar" class="btn-buscar-mobile">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-decoration"></div>
+            <h2 class="hero-title">Accesorios que acompañan tu esencia</h2>
+            <p class="hero-description">
+                Piezas seleccionadas con una estética suave, femenina y atemporal.
+                Descubrí nuestra colección de bijouterie elegante.
+            </p>
+        </section>
+
+        <!-- CONTENEDOR PRINCIPAL -->
+        <main class="main-container" id="main-content">
+            <!-- SIDEBAR -->
+            <aside class="sidebar" role="complementary">
+                <div class="search-box">
+                    <button id="toggleSearch" class="search-icon-btn" aria-label="Mostrar búsqueda" aria-expanded="false">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>Buscar</span>
+                    </button>
+                    <div class="search-input-wrapper" id="searchWrapper">
+                        <label for="sidebarSearchInput" class="visually-hidden">Buscar productos</label>
+                        <input type="search" id="sidebarSearchInput" placeholder="Buscar productos..." autocomplete="off">
+                        <button id="sidebarBtnBuscar" class="btn-buscar-deslizar">Buscar</button>
+                    </div>
+                </div>
+
+                <nav class="categories-vertical">
+                    <a href="#" data-cat="todos" class="active">Todos</a>
+                    <a href="#" data-cat="anillos">Anillos</a>
+                    <a href="#" data-cat="aros">Aros</a>
+                    <a href="#" data-cat="cadenas con dijes">Cadenas con Dijes</a>
+                    <a href="#" data-cat="collares">Collares</a>
+                    <a href="#" data-cat="corbatines">Corbatines</a>
+                    <a href="#" data-cat="dijes">Dijes</a>
+                    <a href="#" data-cat="gargantillas">Gargantillas</a>
+                    <a href="#" data-cat="pulseras">Pulseras</a>
+                </nav>
+            </aside>
+
+            <!-- CATÁLOGO -->
+            <section class="content-right">
+                <div id="contenedor-productos" class="catalogo" role="region" aria-label="Catálogo de productos">
+                    <!-- Los productos se cargarán dinámicamente -->
+                </div>
+                <button id="btnVerMas" class="btn-ver-mas">Ver más productos</button>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer" role="contentinfo">
+            <div class="footer-icons">
+                <address class="footer-contact">
+                    <a href="https://maps.app.goo.gl/9BP5y4hLx771Yj7J8" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Calchín, Córdoba</span>
+                    </a>
+                    <a href="https://wa.me/5493573446504" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>+5493573446504</span>
+                    </a>
+                    <a href="https://www.instagram.com/diammond.accesorios/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>@diammond.accesorios</span>
+                    </a>
+                    <a href="mailto:valentinaaudisio07@gmail.com">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>valentinaaudisio07@gmail.com</span>
+                    </a>
+                </address>
+            </div>
+            <p class="footer-copyright">
+                © 2026 Diammond Accesorios — La belleza de un accesorio está en la mujer que lo usa.
+            </p>
+        </footer>
+    </div>
+
+    <!-- MODAL DE PRODUCTO -->
+    <div id="modalProducto" class="modal" aria-hidden="true" role="dialog">
+        <!-- Contenido generado dinámicamente -->
+    </div>
+
+    <!-- MODAL DE USUARIO -->
+    <div id="userModal" class="modal-user" aria-hidden="true" role="dialog">
+        <!-- Contenido generado dinámicamente -->
+    </div>
+
+    <!-- MODAL DE LOGOUT -->
+    <div id="logoutModal" class="modal-user" style="display: none;">
+        <div class="user-modal-content" style="max-width: 420px; text-align: center;">
+            <h2 style="font-family: 'Cinzel', serif; margin-bottom: 1rem;">¿Deseas cerrar sesión?</h2>
+            <p style="margin-bottom: 2rem; color: var(--gris-oscuro);">¿Estás seguro de que quieres salir?</p>
+            <div style="display: flex; gap: 15px; justify-content: center;">
+                <button id="confirmLogout" class="btn-admin-action btn-admin-delete">Sí</button>
+                <button id="cancelLogout" class="btn-admin-action btn-admin-edit">No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL AGREGAR PRODUCTO -->
+    <div id="modalAgregar" class="modal-overlay">
+        <div class="modal-box">
+            <button class="modal-close-new" onclick="cerrarModalCRUD('modalAgregar')">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h2>Agregar Producto</h2>
+
+            <form id="formAgregar" class="modal-form-grid" enctype="multipart/form-data" autocomplete="off">
+                <div class="col">
+                    <label>Nombre</label>
+                    <input id="prodNombre" name="nombre" type="text" required>
+                </div>
+
+                <div class="col">
+                    <label>Modelo</label>
+                    <input id="prodModelo" name="modelo" type="text" required>
+                </div>
+
+                <div class="col">
+                    <label>Color</label>
+                    <input id="prodColor" name="color" type="text" required>
+                </div>
+
+                <div class="col">
+                    <label>Categoría</label>
+                    <input id="prodCategoria" list="dlCategorias" name="categoria" placeholder="Elije o escribe una categoría">
+                    <datalist id="dlCategorias"></datalist>
+                </div>
+
+                <div class="col">
+                    <label>Marca</label>
+                    <input id="prodMarca" list="dlMarcas" name="marca" placeholder="Elije o escribe una marca">
+                    <datalist id="dlMarcas"></datalist>
+                </div>
+
+                <div class="col">
+                    <label>Material</label>
+                    <input id="prodMaterial" list="dlMateriales" name="material" placeholder="Elije o escribe un material">
+                    <datalist id="dlMateriales"></datalist>
+                </div>
+
+                <div class="col">
+                    <label>Medidas (cm/mm/m)</label>
+                    <input id="prodMedida" name="medida" type="text">
+                </div>
+
+                <div class="col">
+                    <label>Talle</label>
+                    <input id="prodTalle" name="talle" type="number">
+                </div>
+
+                <div class="col">
+                    <label>Stock</label>
+                    <input id="prodStock" name="stock" type="number" min="0" required>
+                </div>
+
+                <div class="col">
+                    <label>Imagen</label>
+                    <input id="prodImagen" name="imagen" type="file" accept="image/*">
+                </div>
+
+                <div class="preview-contenedor-editar">
+                    <img id="imgPreviewAgregar" src="" alt="Vista previa" style="display: none;">
+                </div>
+            </form>
+
+            <div class="modal-buttons">
+                <button class="btn-cancel" onclick="resetFormAndClose('modalAgregar','formAgregar')">Cancelar</button>
+                <button class="btn-save" onclick="guardarNuevoProducto()">Guardar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL EDITAR PRODUCTO -->
+    <div id="modalEditar" class="modal-overlay">
+        <div class="modal-box">
+            <button class="modal-close-new" onclick="cerrarModalCRUD('modalEditar')">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h2>Editar Producto</h2>
+
+            <form id="formEditar" class="modal-form-grid" enctype="multipart/form-data" autocomplete="off">
+                <input type="hidden" id="prodIdEditar" name="id_producto">
+
+                <div class="col">
+                    <label>Nombre</label>
+                    <input id="prodNombreEditar" name="nombre" type="text" required>
+                </div>
+
+                <div class="col">
+                    <label>Modelo</label>
+                    <input id="prodModeloEditar" name="modelo" type="text" required>
+                </div>
+
+                <div class="col">
+                    <label>Color</label>
+                    <input id="prodColorEditar" name="color" type="text" required>
+                </div>
+
+                <div class="col">
+                    <label>Categoría</label>
+                    <input id="prodCategoriaEditar" list="dlCategoriasEditar" name="categoria">
+                    <datalist id="dlCategoriasEditar"></datalist>
+                </div>
+
+                <div class="col">
+                    <label>Marca</label>
+                    <input id="prodMarcaEditar" list="dlMarcasEditar" name="marca">
+                    <datalist id="dlMarcasEditar"></datalist>
+                </div>
+
+                <div class="col">
+                    <label>Material</label>
+                    <input id="prodMaterialEditar" list="dlMaterialesEditar" name="material">
+                    <datalist id="dlMaterialesEditar"></datalist>
+                </div>
+
+                <div class="col">
+                    <label>Medidas</label>
+                    <input id="prodMedidaEditar" name="medida" type="text">
+                </div>
+
+                <div class="col">
+                    <label>Talle</label>
+                    <input id="prodTalleEditar" name="talle" type="number">
+                </div>
+
+                <div class="col">
+                    <label>Stock</label>
+                    <input id="prodStockEditar" name="stock" type="number" min="0" required>
+                </div>
+
+                <div class="col">
+                    <label>Imagen</label>
+                    <input id="prodImagenEditar" name="imagen" type="file" accept="image/*">
+                </div>
+
+                <div class="preview-contenedor-editar">
+                    <img id="imgPreviewEditar" src="" alt="Vista previa" style="display: none;">
+                </div>
+            </form>
+
+            <div class="modal-buttons">
+                <button class="btn-cancel" onclick="resetFormAndClose('modalEditar','formEditar')">Cancelar</button>
+                <button class="btn-save" onclick="guardarEdicionProducto()">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL ELIMINAR PRODUCTO -->
+    <div id="modalEliminar" class="modal-overlay">
+        <div class="modal-box modal-delete">
+            <button class="modal-close-new" onclick="cerrarModalCRUD('modalEliminar')">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h2>¿Eliminar producto?</h2>
+            <p id="prodTextoEliminar">Esta acción no se puede deshacer.</p>
+
+            <div class="modal-buttons">
+                <button onclick="cerrarModalCRUD('modalEliminar')" class="btn-cancel">Cancelar</button>
+                <button onclick="confirmarEliminar()" class="btn-delete">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
